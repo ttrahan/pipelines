@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Welcome to the Amazon ECS-Weave-Shippable Booth Challenge!
+## Welcome to the Weave-Shippable Challenge!
 
 In this challenge, you'll set up fully automated deployments of the front-end
 component for the containerized [Socks Shop eCommerce](https://microservices-demo.github.io/) application, in 30 minutes or less.
@@ -18,11 +18,10 @@ To complete the challenge, you will:
 
   * Configure a CI/CD pipeline and deploy the <a href="https://github.com/microservices-demo/front-end" style="color: orange">
   front-end</a> service using Shippable
-  * Explore the Amazon ECS, Weave Scope, and Shippable services
+  * Explore the Weave Scope and Shippable services
   * Register for the prize drawing
 
-Stop by the `Shippable booth (#1243)` or the `Weave booth (#1140)` at any time during
-expo hours for assistance.
+Open up a support ticket at http://github.com/Shippable/support if you require assistance with the contest.
 
 ---
 
@@ -138,7 +137,9 @@ the service you'll deploy:
             portMappings:
               - 40000:40000
       </pre>
-      * Replace the portMappings with a port number between 40001-49999,  e.g. `40833:40833`
+      * Replace the portMappings with a port number you select between 40001-49999,
+      e.g. `40833:40833`. Note that your deployment will fail if you select a port
+      number that is already taken.
       <p></p>
 
     * Resource `params-front-end-test`
@@ -165,7 +166,9 @@ the service you'll deploy:
             portMappings:
               - 50000:50000
       </pre>
-      * Replace the portMappings with a port number between 50000-59999,  e.g. `50833:50833`
+      * Replace the portMappings with a port number between 50000-59999,  e.g.
+      `50833:50833`. Note that your deployment will fail if you select a port
+      number that is already taken.
       <p></p>
 
     * Resource `params-front-end-prod`
@@ -279,7 +282,8 @@ Pipeline</span> via an <span style="color: orange">Event Trigger</span></p>
     * Select `Save`
     ![acct-integration-trigger](../assets/img/shippable-pipeline-6-1.png){:width="600px"}  
   * Now, assign your Account Integration for use by your Subscription
-    * Select your Subscription from the dropdown menu in upper left
+    * Select your Subscription from the dropdown menu in upper left (three horizontal
+      lines)
     * Select `Settings` tab, `Integrations` tab, and `Add Integration`
     * Complete the fields with the following values:
       * Name: trigger-img-front-end
@@ -358,11 +362,8 @@ auto-deploy to the Test environment</span></p>
 ---
 
 ### Register for the prize drawing!
-When finished exploring, return to the `Shippable booth (#1243)` and show your
-pipeline to register for the prize drawing and be eligible to win one of these
-great prizes:
+When finished exploring, tweet a screen shot of your pipeline 'SPOG' view to
+@beShippable and @weaveworks with hashtags #ContinuousDelivery and #ServiceDiscovery
+to be eligible to win one of these great prizes:
 
-  * MacBook Air
-  * Vive VR Headset
-  * Bose SoundLink
-  * Amazon Echo Dot
+  *
