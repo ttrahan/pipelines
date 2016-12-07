@@ -2,10 +2,15 @@
 layout: default
 ---
 
-## Welcome to the Weave-Shippable Challenge!
+## Your second chance to complete the Weave-Shippable Challenge!
 
-In this challenge, you'll set up fully automated deployments of the front-end
-component for the containerized [Socks Shop eCommerce](https://microservices-demo.github.io/) application, in 30 minutes or less.
+For all of those who didn't have time to participate during re:Invent, you have
+a second chance!  
+
+In this challenge, you'll set up fully automated deployments
+of the front-end component for the containerized
+[Socks Shop eCommerce](https://microservices-demo.github.io/) application, in
+30 minutes or less.
 
 The sample application will feature:
 
