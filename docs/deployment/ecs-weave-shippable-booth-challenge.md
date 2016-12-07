@@ -366,4 +366,4 @@ When finished exploring, tweet a screen shot of your pipeline 'SPOG' view to
 @beShippable and @weaveworks with hashtags #ContinuousDelivery and #ServiceDiscovery
 to be eligible to win one of these great prizes:
 
-  *
+  * Eight (8) $50 Amazon Gift Cards
