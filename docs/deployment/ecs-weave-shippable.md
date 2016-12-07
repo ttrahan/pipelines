@@ -210,7 +210,7 @@ environment:
       <p></p>
 
     Now, load your Pipeline configuration files into Shippable:
-    
+
     * Select the `Pipelines` tab, `Resources` view, and then `Add Resource`
     button (far right)
     * In the Subscription Integrations dropdown: choose `Add integration` and
@@ -359,5 +359,6 @@ auto-deploy to the Test environment</span></p>
 
 ### Delete your CloudFormation stack
 When finished exploring, return to the <a href="https://console.aws.amazon.com/cloudformation/home#/stacks"
-style="color: orange">AWS Management Console - CloudFormation page</a>, select the `ecs-weave-shippable-demo` stack, select `Actions` and `Delete
-Stack` to remove all resources related to this demo.
+style="color: orange">AWS Management Console - CloudFormation page</a>, select
+the `ecs-weave-shippable-demo` stack, select `Actions` and `Delete Stack` to
+remove all resources related to this demo.
