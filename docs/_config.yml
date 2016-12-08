@@ -1,9 +1,9 @@
 # Production settings
 
 baseurl: "/pipelines"
-url: "https://aws-weave-ship-challenge.github.io"
-deploy_doc_url_prefix: https://aws-weave-ship-challenge.github.io/pipelines
-main_url_prefix: https://aws-weave-ship-challenge.github.io
+url: "https://aws-weave-shippable-challenge.github.io"
+deploy_doc_url_prefix: https://aws-weave-shippable-challenge.github.io/pipelines
+main_url_prefix: https://aws-weave-shippable-challenge.github.io
 
 # Build settings
 markdown: kramdown
