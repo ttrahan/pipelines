@@ -92,11 +92,13 @@ CI</span> in Shippable</p>
   * Navigate to `Account Settings` via the gear icon in the upper right
   * Select `Integrations` tab
   * Select `Add Integration`
-    * Select `Amazon ECR` from the list and complete the fields, as follows:
+    * Select `Create Integration` next to `Amazon ECR` in the list and complete the fields, as follows:
       * Integration Name: name your integration `shippable-ecr`
       * For this challenge, you'll use a pre-configured user with keys AKIAJN2MBNFZ5QO5K6BQ and TtS/ic0hQYQubWasp3Qht0xbiIoLvjqYH/9YZo0J
       * Copy/paste the Aws_access_key_id and Aws_secret_access_key into the
       Shippable fields
+      * Subscriptions: select `All projects` or the GitHub account you forked the
+      challenge repos into to allow your subscription(s) to use these credentials
       * Select `Save`
       ![acct-integration-ecr](../assets/img/shippable-pipeline-3b.png){:width="600px"}
 
@@ -105,30 +107,12 @@ CI</span> in Shippable</p>
         * Name your integration `shippable-aws`
         * Copy/paste the `Aws_access_key_id` and `Aws_secret_access_key` into the
         Shippable fields (use the same values from above)
+        * Subscriptions: select `All projects` or the GitHub account you forked the
+        challenge repos into to allow your subscription(s) to use these credentials
         * Select `Save`
 
-
 {:start="4"}
-4. <p>Enable your subscription to use the credentials you stored</p>
-  * Select your Subscription from the dropdown menu in upper left (three lines)
-  * Select `Settings` tab, `Integrations` tab, and `Add Integration`
-    * Complete the fields with the following values:
-      * Name: shippable-aws
-      * Account Integrations: select `shippable-aws` from the list
-      * Project Permissions: leave `All projects` selected
-      * Select `Save`
-  * Repeat for your `Amazon ECR` credentials - select `Settings` tab, `Integrations`
-  tab, and `Add Integration`
-    * Complete the fields with the following values:
-      * Name: shippable-ecr
-      * Account Integrations: select `shippable-ecr` from the list
-      * Project Permissions: leave `All projects` selected
-      * Select `Save`  
-  ![sub-integration-ecr](../assets/img/shippable-pipeline-4.png){:width="600px"}
-
-
-{:start="5"}
-5. <p>Create the <span style="color: orange">front-end CD pipeline</span></p>
+4. <p>Create the <span style="color: orange">front-end CD pipeline</span></p>
 In your local copy of the `pipelines` repo, you'll need to update
 the `shippable.resources.yml` configuration file with a unique port mapping for
 the service you'll deploy:
@@ -271,8 +255,8 @@ the service you'll deploy:
     * Select `SPOG` view and verify that your pipeline has been loaded
     ![pipeline-load](../assets/img/shippable-pipeline-3.png){:width="600px"}
 
-{:start="6"}
-6. <p>Link <span style="color: orange">CI</span> to your <span style="color: orange">
+{:start="5"}
+5. <p>Link <span style="color: orange">CI</span> to your <span style="color: orange">
 Pipeline</span> via an <span style="color: orange">Event Trigger</span></p>
   * Navigate to `Account Settings` via the gear icon in upper right
   * Navigate to the 'API tokens' tab, create an API Token, and save it (you'll need
@@ -298,8 +282,8 @@ Pipeline</span> via an <span style="color: orange">Event Trigger</span></p>
       <p></p>
     ![sub-integration-trigger](../assets/img/shippable-pipeline-6-2.png){:width="600px"}
 
-{:start="7"}
-7. <p>Run CI and trigger deployment of the `front-end` service to the
+{:start="6"}
+6. <p>Run CI and trigger deployment of the `front-end` service to the
 <span style="color: orange">Test environment</span></p>
   * Select the `CI` tab
   * Select the `Build` button for the `front-end` project
@@ -314,15 +298,15 @@ Pipeline</span> via an <span style="color: orange">Event Trigger</span></p>
   `SockShopALB-351062557.us-east-1.elb.amazonaws.com:8080`
   ![front-end-test](../assets/img/shippable-pipeline-7-3.png){:width="600px"}
 
-{:start="8"}
-8. <p>Deploy to the <span style="color: orange">Prod environment</span></p>
+{:start="7"}
+7. <p>Deploy to the <span style="color: orange">Prod environment</span></p>
   * Right-click the `ecs-deploy-prod` job and select `Run`
   * A Deploy job will run and deploy a Prod instance of `front-end` to Amazon ECS
   * View your application running your `Prod` front-end in your browser at
   `SockShopALB-351062557.us-east-1.elb.amazonaws.com` (it should look identical to your `Test` front-end)
 
-{:start="9"}
-9. <p>Make a change to your front-end service and <span style="color: orange">
+{:start="8"}
+8. <p>Make a change to your front-end service and <span style="color: orange">
 auto-deploy to the Test environment</span></p>
   * In your editor, open the `public/css/style.blue.css` file for the `front-end` repo
   * Toggle lines 1273 and 1274 (i.e. comment out line 1273, and un-comment line 1274 or
@@ -340,8 +324,8 @@ auto-deploy to the Test environment</span></p>
     and confirm that the change was deployed successfully
   ![front-end-test-2](../assets/img/shippable-pipeline-9.png){:width="600px"}
 
-{:start="10"}
-10. <p>Explore!</p>
+{:start="9"}
+9. <p>Explore!</p>
   * Navigate to <a href="http://54.166.157.73:4040" style="color: orange">http://54.166.157.73:4040</a> to view the Weave visualization of
   your containerized application. Click around to see various info on your services.
   ![weavescope](../assets/img/weavescope-10-1.png){:width="600px"}  
