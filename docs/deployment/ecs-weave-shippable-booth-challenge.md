@@ -26,7 +26,7 @@ To complete the challenge, you will:
   * Explore the Weave Scope and Shippable services
   * Register for the prize drawing
 
-Open up a support ticket at http://github.com/Shippable/support if you require assistance with the contest.
+Open up a support ticket at https://github.com/aws-weave-shippable-challenge/pipelines/issues if you require assistance with the contest.
 
 ---
 
