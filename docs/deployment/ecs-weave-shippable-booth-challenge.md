@@ -274,7 +274,7 @@ the service you'll deploy:
     ![acct-integration-trigger](../assets/img/shippable-pipeline-6-1.png){:width="600px"}  
 
 {:start="6"}
-6. <p>Run CI and trigger deployment of the `front-end` service to the<span style="color: orange">Test environment</span></p>
+6. <p>Run CI and trigger deployment of the `front-end` service to the<span style="color: orange"> Test environment</span></p>
   * Select the `CI` tab
   * Select the `Build` button for the `front-end` project
   * View the CI console as your CI run executes
