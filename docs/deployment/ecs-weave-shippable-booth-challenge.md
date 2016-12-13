@@ -278,7 +278,7 @@ the service you'll deploy:
   * Select your Subscription from the dropdown in upper left (three horizontal lines), i.e. _yourGitHubAccountName_  
   * Select the `CI` tab
   * Select the `Build` button for the `front-end` project
-  * View the CI console as your CI run executes. When it completes, it should look like this:
+  * View the CI console as your CI run executes. It will provision a new job node on AWS, then run your build within a Docker container (per the configuration in the `front-end` repo shippable.yml file. When it completes, it should look like this:
   ![ci-front-end](../assets/img/shippable-pipeline-7-1.png){:width="600px"}
   * Navigate to the `Pipelines` tab and see your Pipeline execute
     * You'll see the CI job run and push a new image to Amazon ECR
