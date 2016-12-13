@@ -275,6 +275,7 @@ the service you'll deploy:
 
 {:start="6"}
 6. <p>Run CI and trigger deployment of the `front-end` service to the<span style="color: orange"> Test environment</span></p>
+  * Select your Subscription from the dropdown in upper left (three horizontal lines), i.e. _yourGitHubAccountName_  
   * Select the `CI` tab
   * Select the `Build` button for the `front-end` project
   * View the CI console as your CI run executes
