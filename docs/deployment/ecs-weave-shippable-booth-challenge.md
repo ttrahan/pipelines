@@ -280,6 +280,7 @@ You've now enabled CI and loaded the pipeline configuration for the `front-end` 
 {:start="6"}
 6. <p>Run CI and trigger deployment of the `front-end` service to the
 <span style="color: orange">Test environment</span></p>
+Now you're ready to execute your pipeline by triggering a build via CI:
   * Select the `CI` tab
   * Select the `Build` button for the `front-end` project
   * View the CI console as your CI run executes
