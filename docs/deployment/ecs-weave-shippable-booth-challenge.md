@@ -259,9 +259,6 @@ the service you'll deploy:
 
 {:start="5"}
 5. <p>Link <span style="color: orange">CI</span> to your <span style="color: orange">Pipeline</span> via an <span style="color: orange">Event Trigger</span></p>
-
-You've now enabled CI and loaded the pipeline configuration for the `front-end` repo. Next, we'll connect link your CI runs with the pipeline:
-
   * Navigate to `Account Settings` via the gear icon in upper right
   * Navigate to the 'API tokens' tab, create an API Token, and save it (you'll need
   it again shortly)
@@ -278,9 +275,6 @@ You've now enabled CI and loaded the pipeline configuration for the `front-end` 
 
 {:start="6"}
 6. <p>Run CI and trigger deployment of the `front-end` service to the<span style="color: orange">Test environment</span></p>
-
-Now you're ready to execute your pipeline by triggering a build via CI:
-
   * Select the `CI` tab
   * Select the `Build` button for the `front-end` project
   * View the CI console as your CI run executes
