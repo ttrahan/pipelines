@@ -275,17 +275,7 @@ You've now enabled CI and loaded the pipeline configuration for the `front-end` 
     * To allow your new Event Trigger integration to be used by your Subscription, select your Subscription from the Subscriptions list
     * Select `Save`
     ![acct-integration-trigger](../assets/img/shippable-pipeline-6-1.png){:width="600px"}  
-  * Now, assign your Account Integration for use by your Subscription
-    * Select your Subscription from the dropdown menu in upper left (three horizontal
-      lines)
-    * Select `Settings` tab, `Integrations` tab, and `Add Integration`
-    * Complete the fields with the following values:
-      * Name: trigger-img-front-end
-      * Account Integrations: select `trigger-img-front-end` from the list
-      * Project Permissions: leave `All projects` selected
-      * Select `Save`
       <p></p>
-    ![sub-integration-trigger](../assets/img/shippable-pipeline-6-2.png){:width="600px"}
 
 {:start="6"}
 6. <p>Run CI and trigger deployment of the `front-end` service to the
