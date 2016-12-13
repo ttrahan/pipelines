@@ -274,7 +274,6 @@ the service you'll deploy:
     * To allow your new Event Trigger integration to be used by your Subscription, select your Subscription from the Subscriptions list
     * Select `Save`
     ![acct-integration-trigger](../assets/img/shippable-pipeline-6-1.png){:width="600px"}  
-      <p></p>
 
 {:start="6"}
 6. <p>Run CI and trigger deployment of the `front-end` service to the
