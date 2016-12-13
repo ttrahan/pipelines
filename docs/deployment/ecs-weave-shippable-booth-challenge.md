@@ -253,12 +253,15 @@ the service you'll deploy:
     * Select Project dropdown: choose `pipelines` project
     * Select Branch dropdown: choose `master`
     * Select `Save`
-    * Select `SPOG` view and verify that your pipeline has been loaded
+    * You'll see a number of resources appear as they are loaded from the configuration files
+    * Select `SPOG` view and verify that your full pipeline has loaded successfully. It should look like this:
     ![pipeline-load](../assets/img/shippable-pipeline-3.png){:width="600px"}
 
 {:start="5"}
 5. <p>Link <span style="color: orange">CI</span> to your <span style="color: orange">
 Pipeline</span> via an <span style="color: orange">Event Trigger</span></p>
+
+You've now enabled CI and loaded the pipeline configuration for the `front-end` repo. Next, we'll connect link your CI runs with the pipeline:
   * Navigate to `Account Settings` via the gear icon in upper right
   * Navigate to the 'API tokens' tab, create an API Token, and save it (you'll need
   it again shortly)
@@ -269,6 +272,7 @@ Pipeline</span> via an <span style="color: orange">Event Trigger</span></p>
     * Select `Resource` in the `Select Trigger` dropdown
     * Select the `img-front-end` resource you created in your pipeline
     * In Authorization field, enter 'apiToken ' + your API token from above
+    * To allow your new Event Trigger integration to be used by your Subscription, select your Subscription from the Subscriptions list
     * Select `Save`
     ![acct-integration-trigger](../assets/img/shippable-pipeline-6-1.png){:width="600px"}  
   * Now, assign your Account Integration for use by your Subscription
