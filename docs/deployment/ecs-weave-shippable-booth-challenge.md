@@ -241,6 +241,7 @@ the service you'll deploy:
 
     Now, load your Pipeline configuration files into Shippable:
 
+    * Select your Subscription from the dropdown in upper left (three horizontal lines), i.e. _yourGitHubAccountName_
     * Select the `Pipelines` tab, `Resources` view, and then `Add Resource`
     button (far right)
     * In the Subscription Integrations dropdown: choose `Add integration` and
