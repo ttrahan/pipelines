@@ -2,13 +2,13 @@
 layout: default
 ---
 
-## Your second chance to complete the Weave-Shippable Challenge!
+## Your Second Chance to Complete the Weave-Shippable Challenge!
 
 For all of those who didn't have time to participate during re:Invent, you have
 a second chance!  
 
 In this challenge, you'll set up fully automated deployments
-of the front-end component for the containerized
+of the front-end component for the microservices-based, containerized
 [Socks Shop eCommerce](https://microservices-demo.github.io/) application, in
 30 minutes or less.
 
@@ -16,7 +16,8 @@ The sample application will feature:
 
   * **Amazon ECS**{: style="color: orange"} for container orchestration
   * **Amazon ECR**{: style="color: orange"} for container registry
-  * **Weave Scope**{: style="color: orange"} for service discovery and container visualization
+  * **[Weave Scope](https://www.weave.works/weave-scope)**{: style="color: orange"} for troubleshooting and visualizing your app
+  * **[Weave Net](https://www.weave.works/products/weave-net/)** {: style="color: orange"} for container networking and service discovery
   * **Shippable**{: style="color: orange"} for automated CI/CD
 
 To complete the challenge, you will:
@@ -26,7 +27,7 @@ To complete the challenge, you will:
   * Explore the Weave Scope and Shippable services
   * Register for the prize drawing
 
-Open up a support ticket at https://github.com/aws-weave-shippable-challenge/pipelines/issues if you require assistance with the contest.
+Open a support ticket at https://github.com/aws-weave-shippable-challenge/pipelines/issues if you require assistance with the contest.
 
 ---
 
@@ -316,9 +317,15 @@ auto-deploy to the Test environment</span></p>
   ![front-end-test-2](../assets/img/shippable-pipeline-9.png){:width="600px"}
 
 {:start="9"}
-9. <p>Explore!</p>
-  * Navigate to <a href="http://54.166.157.73:4040" style="color: orange">http://54.166.157.73:4040</a> to view the Weave visualization of
-  your containerized application. Click around to see various info on your services.
+9. <p>Explore microservices with Weave Scope!</p>
+  * Navigate to <a href="http://54.166.157.73:4040" style="color: orange">http://54.166.157.73:4040</a> 
+  to view the Weave Scope visualization of your containerized application. Filter microservices in the 
+  Sockshop application by Process, or Container and drill down into the ECS cluster 
+  to view the health of your Tasks and Services.  For more information on 
+  [Weave Scope](https://www.weave.works/products/weave-scope/) and 
+  [Weave Cloud](https://cloud.weave.works/instances), see 
+  the [Weaveworks Getting Started Guides](https://www.weave.works/docs/).
+  <p></p>
   ![weavescope](../assets/img/weavescope-10-1.png){:width="600px"}  
   * Login with username `booth` and password `Challenge2016` <a href="https://betaship.signin.aws.amazon.com/console"
   style="color: orange">to the AWS Management Console</a>
@@ -347,3 +354,4 @@ When finished exploring, tweet a screen shot of your pipeline 'SPOG' view to
 to be eligible to win one of these great prizes:
 
   * Eight (8) $50 Amazon Gift Cards
+
