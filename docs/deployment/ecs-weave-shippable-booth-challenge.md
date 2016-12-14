@@ -259,6 +259,7 @@ the service you'll deploy:
 
 {:start="5"}
 5. <p>Link <span style="color: orange">CI</span> to your <span style="color: orange">Pipeline</span> via an <span style="color: orange">Event Trigger</span></p>
+Now that you've configured your CI/build process with your CD pipeline, it's time to connect the two with a webhook notification:
   * Navigate to `Account Settings` via the gear icon in upper right
   * Navigate to the 'API tokens' tab, create an API Token, and save it (you'll need
   it again shortly)
@@ -275,9 +276,10 @@ the service you'll deploy:
 
 {:start="6"}
 6. <p>Run CI and trigger deployment of the `front-end` service to the<span style="color: orange"> Test environment</span></p>
+With your CI/CD workflow now configured, it's time to kick it off from the beginning by running a build:
   * Select your Subscription from the dropdown in upper left (three horizontal lines), i.e. _yourGitHubAccountName_  
   * Select the `CI` tab
-  * Select the `Build` button for the `front-end` project
+  * Manually trigger the build by selecting the `Build` button for the `front-end` project (typically, most builds will be triggered by a webhook sent from the source control system for commits, PRs, tags and releases, but you can always manually trigger, as well)
   * View the CI console as your CI run executes. It will provision a new job node on AWS, then run your build within a Docker container (per the configuration in the `front-end` repo shippable.yml file. When it completes, it should look like this:
   ![ci-front-end](../assets/img/shippable-pipeline-7-1.png){:width="600px"}
   * Navigate to the `Pipelines` tab and see your Pipeline execute
@@ -291,14 +293,18 @@ the service you'll deploy:
 
 {:start="7"}
 7. <p>Deploy to the <span style="color: orange">Prod environment</span></p>
+Now that you've run CI/build and deployed a Test instance of your container, let's promote that deployment to the Prod environment:
   * Right-click the `ecs-deploy-prod` job and select `Run`
   * A Deploy job will run and deploy a Prod instance of `front-end` to Amazon ECS
   * View your application running your `Prod` front-end in your browser at
   `SockShopALB-351062557.us-east-1.elb.amazonaws.com` (it should look identical to your `Test` front-end)
 
 {:start="8"}
-8. <p>Make a change to your front-end service and <span style="color: orange">
-auto-deploy to the Test environment</span></p>
+8. <p>Make a change to your front-end service and <span style="color: orange">auto-deploy to
+the Test environment</span></p>
+You've now run the pipeline end-to-end and have the same version of the `front-end` component
+running in both Test and Prod. Next, make a code change and trigger an automated deployment
+of the change to the Test environment:
   * In your editor, open the `public/css/style.blue.css` file for the `front-end` repo
   * Toggle lines 1273 and 1274 (i.e. comment out line 1273, and un-comment line 1274 or
     vice-versa). This will switch the color of the active tab on the home page
@@ -317,7 +323,11 @@ auto-deploy to the Test environment</span></p>
 
 {:start="9"}
 9. <p>Explore!</p>
-  * Navigate to <a href="http://54.166.157.73:4040" style="color: orange">http://54.166.157.73:4040</a> to view the Weave visualization of
+You've now set up a simple end-to-end pipeline for a single component of an eCommerce site. Of
+course, you could do much more, including setting up pipelines for each component, adding in
+automated functional testing jobs, creating releases, provisioning temporary infrastructure, etc.,
+For now, let's explore the existing setup a bit more:
+  * Navigate to <a href="http://54.164.124.206/:4040" style="color: orange">http://54.164.124.206/:4040</a> to view the Weave visualization of
   your containerized application. Click around to see various info on your services.
   ![weavescope](../assets/img/weavescope-10-1.png){:width="600px"}  
   * Login with username `booth` and password `Challenge2016` <a href="https://betaship.signin.aws.amazon.com/console"
@@ -327,8 +337,8 @@ auto-deploy to the Test environment</span></p>
   you're in the Virginia region!). Find your deployed services
   (they start with your last name) and drill in.
   ![amazon-ecs](../assets/img/amazon-ecs-10-2.png){:width="600px"}
-  * Navigate to Amazon ECR repository to view your newly created Docker images
-  * Select `Repositories` in the left-hand nav from your cluster page
+  * Navigate to Amazon ECR repository to view your newly created Docker images selecting
+  `Repositories` in the left-hand nav from your cluster page
   ![amazon-ecr](../assets/img/amazon-ecr-10-3.png){:width="600px"}
 
     * Explore additional elements of your Shippable Pipelines:
