@@ -16,12 +16,8 @@ The sample application will feature:
 
   * **Amazon ECS**{: style="color: orange"} for container orchestration
   * **Amazon ECR**{: style="color: orange"} for container registry
-<<<<<<< HEAD
-  * **Weave Scope**{: style="color: orange"} for service discovery and container visualization
-=======
   * **<a href="https://www.weave.works/weave-scope" style="color: orange">Weave Scope</a>** for troubleshooting and visualizing your app
   * **<a href="https://www.weave.works/weave-net" style="color: orange">Weave Net</a>** for container networking and service discovery
->>>>>>> a7475a943f8d0331df4d320620cbb43f4b0d2f03
   * **Shippable**{: style="color: orange"} for automated CI/CD
 
 To complete the challenge, you will:
