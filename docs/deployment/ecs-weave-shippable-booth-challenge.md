@@ -323,25 +323,35 @@ of the change to the Test environment:
 
 {:start="9"}
 9. <p>Explore!</p>
-You've now set up a simple end-to-end pipeline for a single component of an eCommerce site. Of
-course, you could do much more, including setting up pipelines for each component, adding in
-automated functional testing jobs, creating releases, provisioning temporary infrastructure, etc.,
-For now, let's explore the existing setup a bit more:
-  * Navigate to <a href="http://54.164.124.206/:4040" style="color: orange">http://54.164.124.206/:4040</a> to view the Weave visualization of
-  your containerized application. Click around to see various info on your services.
+You've now set up a simple end-to-end pipeline for a single component of an
+eCommerce site. Of course, you could do much more, including setting up pipelines
+for each component, adding in automated functional testing jobs, creating releases, provisioning temporary infrastructure, etc. For now, let's explore the existing
+setup a bit more.  
+
+{:start="10"}
+10. <p>Explore microservices with Weave Scope:</p>
+  * Navigate to http://54.166.157.73:4040 to view the Weave Scope visualization of your containerized application.
+  * Filter microservices in the Sockshop application by Process, or Container and drill down into the ECS cluster to view the health of your Tasks and Services.
+  * For more information on Weave Scope and Weave Cloud see the <a href="https://www.weave.works/guides/" style="color: orange">Weaveworks Getting
+  Started Guides.
   ![weavescope](../assets/img/weavescope-10-1.png){:width="600px"}  
+
+{:start="11"}
+11. <p>Explore containers with Amazon ECS and ECR:</p>
   * Login with username `booth` and password `Challenge2016` <a href="https://betaship.signin.aws.amazon.com/console"
   style="color: orange">to the AWS Management Console</a>
-  * Explore <a href="https://console.aws.amazon.com/ecs/home#/clusters/ecs-weave-shippable-demo/services" style="color: orange">
-  the different elements of the cluster in Amazon ECS</a> (make sure
-  you're in the Virginia region!). Find your deployed services
+  * Explore <a href="https://console.aws.amazon.com/ecs/home#/clusters/ecs-weave-shippable-demo/services" style="color: orange">the different elements of the cluster in Amazon ECS</a>
+  (make sure you're in the Virginia region!). Find your deployed services
   (they start with your last name) and drill in.
   ![amazon-ecs](../assets/img/amazon-ecs-10-2.png){:width="600px"}
   * Navigate to Amazon ECR repository to view your newly created Docker images selecting
   `Repositories` in the left-hand nav from your cluster page
   ![amazon-ecr](../assets/img/amazon-ecr-10-3.png){:width="600px"}
 
-    * Explore additional elements of your Shippable Pipelines:
+{:start="12"}
+12. <p>Explore additional elements of your Shippable Pipelines:</p>
+      * Click on the Test deploy job in the SPOG view (`yourName-ecs-deploy-test-front-end`)
+      to drill down to the console level output of the deployment
       * Select the `Jobs` view in the Pipelines tab and click on the `Latest Version`
       number for the `ecs-deploy-test-front-end` job.
       * For the most recent version, select `More` and `Trace` to see details of the
