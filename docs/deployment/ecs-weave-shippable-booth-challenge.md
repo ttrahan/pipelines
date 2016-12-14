@@ -16,8 +16,8 @@ The sample application will feature:
 
   * **Amazon ECS**{: style="color: orange"} for container orchestration
   * **Amazon ECR**{: style="color: orange"} for container registry
-  * **[Weave Scope](https://www.weave.works/weave-scope)**{: style="color: orange"} for troubleshooting and visualizing your app
-  * **[Weave Net](https://www.weave.works/products/weave-net/)** {: style="color: orange"} for container networking and service discovery
+  * **<a href="https://www.weave.works/weave-scope"style="color: orange">Weave Scope</a>** for troubleshooting and visualizing your app
+  * **<a href="https://www.weave.works/weave-scope" style="color: orange">Weave Net</a>** for container networking and service discovery
   * **Shippable**{: style="color: orange"} for automated CI/CD
 
 To complete the challenge, you will:
@@ -322,9 +322,9 @@ auto-deploy to the Test environment</span></p>
   to view the Weave Scope visualization of your containerized application. Filter microservices in the 
   Sockshop application by Process, or Container and drill down into the ECS cluster 
   to view the health of your Tasks and Services.  For more information on 
-  [Weave Scope](https://www.weave.works/products/weave-scope/) and 
-  [Weave Cloud](https://cloud.weave.works/instances), see 
-  the [Weaveworks Getting Started Guides](https://www.weave.works/docs/).
+  <a href="https://www.weave.works/products/weave-scope/ style="color: orange">Weave Scope </a>and 
+  <a href="https://cloud.weave.works style="color: orange">Weave Cloud </a> see 
+  the <a href="https://www.weave.works/docs/ style="color: orange"> Weaveworks Getting Started Guides </a>.
   <p></p>
   ![weavescope](../assets/img/weavescope-10-1.png){:width="600px"}  
   * Login with username `booth` and password `Challenge2016` <a href="https://betaship.signin.aws.amazon.com/console"
