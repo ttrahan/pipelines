@@ -109,3 +109,28 @@ resources:
       count: 1
 
 #--------------------
+
+# GitHub repo holding scripts
+  - name: repo-cfScripts
+    type: gitRepo
+    integration: ttrahan-gh
+    pointer:
+      sourceName: ttrahan/pipelines
+      branch: master
+
+# Environment variables for Cloud Formation template
+  - name: params-cfScripts
+    type: params
+    version:
+      params:
+        StackName: "ecs-weave-shippable"
+        EcsInstanceType: "t2.medium"
+        Scale: 4
+        KeyName: "kp-us-east-1"
+        DeployExampleApp: "Yes"
+        WeaveCloudServiceToken: ""
+
+# AWS credentials
+  - name: integration-aws
+    type: integration
+    integration: AWS

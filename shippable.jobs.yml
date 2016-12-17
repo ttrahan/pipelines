@@ -63,3 +63,19 @@ jobs:
       - TASK: managed
 
 ################################
+
+# pipeline to create, update and delete infrastructure using CloudFormation
+
+# Shell script infrastructure deployment to AWS
+  - name: cfCreateStack
+    type: runSh
+    steps:
+      - IN: repo-cfScripts
+      - IN: params-cfScripts
+      - IN: integration-aws
+      - TASK:
+        - script: . /build/IN/repo-cfScripts/gitRepo/deploy/aws-ecs-shippable/create-stack.sh repo-cfScripts params-cfScripts integration-aws
+      - on_success:
+        - echo "stack created successfully"
+      - on_failure:
+        - echo "stack not created - error encountered"
