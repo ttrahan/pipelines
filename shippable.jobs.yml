@@ -79,3 +79,37 @@ jobs:
         - echo "stack created successfully"
       - on_failure:
         - echo "stack not created - error encountered"
+
+# Shell script infrastructure deployment to AWS
+  - name: cfUpdateStack
+    type: runSh
+    steps:
+      - IN: cfCreateStack
+        switch: off
+      - IN: repo-cfScripts
+        switch: off
+      - IN: params-cfScripts
+      - IN: integration-aws
+      - TASK:
+        - script: . /build/IN/repo-cfScripts/gitRepo/deploy/aws-ecs-shippable/update-stack.sh repo-cfScripts params-cfScripts integration-aws
+      - on_success:
+        - echo "stack updated successfully"
+      - on_failure:
+        - echo "stack not updated - error encountered"
+
+# Shell script infrastructure deployment to AWS
+  - name: cfDeleteStack
+    type: runSh
+    steps:
+      - IN: cfUpdateStack
+        switch: off
+      - IN: repo-cfScripts
+        switch: off
+      - IN: params-cfScripts
+      - IN: integration-aws
+      - TASK:
+        - script: . /build/IN/repo-cfScripts/gitRepo/deploy/aws-ecs-shippable/delete-stack.sh repo-cfScripts params-cfScripts integration-aws
+      - on_success:
+        - echo "stack deleted successfully"
+      - on_failure:
+        - echo "stack not deleted - error encountered"

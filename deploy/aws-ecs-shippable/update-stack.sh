@@ -1,9 +1,24 @@
 #! /bin/bash -e
 
-STACK_NAME=ecs-weave-shippable
-AWS_KEY_NAME=kp-us-east-1
+# source helper scripts
+for f in helpers/* ; do
+  source $f ;
+done
 
-# execute if cloudformation.json is updated
+# input parameters
+JOB=$1
+SCRIPT_REPO=$2
+PARAMS_RESOURCE=$3
+INTEGRATION=$4
+
+# execute
+install_tools
+install_awscli
+extract_previous_state $JOB
+load_params $PARAMS_RESOURCE
+extract_integration $INTEGRATION
+
+# update cloudformation stack
 aws cloudformation update-stack --stack-name $STACK_NAME --template-body file://$(pwd)/cloudformation.json --parameters  ParameterKey="EcsInstanceType",ParameterValue="t2.medium" ParameterKey="Scale",ParameterValue=4 ParameterKey="KeyName",ParameterValue=$AWS_KEY_NAME ParameterKey="DeployExampleApp",ParameterValue="Yes" ParameterKey="WeaveCloudServiceToken",ParameterValue="" --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
 
 printf "updating stack ."

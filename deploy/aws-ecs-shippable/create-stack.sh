@@ -18,7 +18,7 @@ extract_previous_state $JOB
 load_params $PARAMS_RESOURCE
 extract_integration $INTEGRATION
 
-# execute for initial stack creation
+# create cloudformation stack
 aws cloudformation create-stack --stack-name $StackName --template-body file://$(pwd)/cloudformation.json --parameters ParameterKey="EcsInstanceType",ParameterValue="t2.medium" ParameterKey="Scale",ParameterValue=4 ParameterKey="KeyName",ParameterValue=$KeyName ParameterKey="DeployExampleApp",ParameterValue="Yes" ParameterKey="WeaveCloudServiceToken",ParameterValue="" --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
 
 printf "creating stack ."

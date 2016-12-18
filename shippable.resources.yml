@@ -133,4 +133,4 @@ resources:
 # AWS credentials
   - name: integration-aws
     type: integration
-    integration: AWS
+    integration: ttrahan-aws

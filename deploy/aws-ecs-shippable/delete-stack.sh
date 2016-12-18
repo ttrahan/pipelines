@@ -1,9 +1,24 @@
 #! /bin/bash -e
 
-STACK_NAME=ecs-weave-shippable
-AWS_KEY_NAME=kp-us-east-1
+# source helper scripts
+for f in helpers/* ; do
+  source $f ;
+done
 
-# execute to destroy and delete stack
+# input parameters
+JOB=$1
+SCRIPT_REPO=$2
+PARAMS_RESOURCE=$3
+INTEGRATION=$4
+
+# execute
+install_tools
+install_awscli
+extract_previous_state $JOB
+load_params $PARAMS_RESOURCE
+extract_integration $INTEGRATION
+
+# # delete cloudformation stack
 aws cloudformation delete-stack --stack-name ecs-weave-shippable
 
 printf "deleting stack ... this may take a few minutes"
